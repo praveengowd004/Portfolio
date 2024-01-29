@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/65ce0a571e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav> 
+                <ul id="sidemenu">
+                    <li><a href="#header">home</a></li>
+                    <li><a href="#about">skills</a></li>
+                    <li><a href="#portfolio">projects</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="openmenu()"></i> 
+                </ul>
+                <i class="fa-solid fa-bars" onclick="closemenu()"></i>
+                <img src="pic1.jpg" alt="pic" class="imag">
+            </nav>
+            <div class="header-text">
+                <h1>basa praveen</h1>
+                <p>Hi, i am a full stack develop</p>
+            </div>
+        </div>
+    </div>
+<!-------      about    ----------->
+    <div id="about">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="pic2.jpg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">about</h1>
+                <p>Seeking a challenging position in a reputed organization where I can learn new skills, expand my knowledge, and leverage my learnings.</p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Frontend Technologies</span><br>html,css,javascript,react</li>
+                        <li><span>backend Technologies</span><br>java , jdbc , hibernate</li>
+                        <li><span>Database Technologies</span><br>My sql , Oracle</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Graduation</span><br>2020-2023 <br>percentage : 80.00%</li>
+                        <li><span>Diploma</span><br>2017-2020 <br>percentage : 82.00%</li>
+                        <li><span>Schooling</span><br>2017<br>percentage : 95.00%</li>
+                    </ul>
+                </div>
+        </div>
+
+    </div>
+
+<!-----------------------projecst------------------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-3.png" alt="">
+                    <div class="layer">
+                        <h3>Amazon clone</h3>
+                        <p>static Amazon website <br>using html and css <br> Technologies</p>
+                        <a href="https://praveengowd004.github.io/amazon-clone/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+            <!--
+                </div>
+                <div class="work" >
+                    <img src="work-2.png" alt="">
+                    <div class="layer">
+                        <h3>music app</h3>
+                        <p>the app connects you to the talented people around the world</p>
+                        <a href="#"><i class="fa-solid fa-link-slash"></i></a>
+                    </div>
+
+                </div>
+                <div class="work" >
+                    <img src="work-3.png" alt="">
+                    <div class="layer">
+                        <h3>social media app</h3>
+                        <p>the app connects you to the talented people around the world</p>
+                        <a href="#"><i class="fa-solid fa-link-slash"></i></a>
+                    </div>
+                </div>
+            -->
+            
+            </div>
+        </div>
+    </div>
+<!--------------------contact---------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">
+                        contact me
+                    </h1>
+                    <p><i class="fa-solid fa-envelope"></i>praveengowd004@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>9948779347</p>
+                    <div class="social-icons">
+
+                        <a href="https://www.instagram.com/praveen_0000000/"><i class="fa-brands fa-instagram"></i></a>
+
+                        <a href="https://www.linkedin.com/in/basa-praveen-232a1626a/"><i class="fa-brands fa-linkedin"></i></a>
+                       
+                      
+                  
+                    </div>
+                    <a href="Basa Praveen.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="your name" required>
+                        <input type="mail" name="email" placeholder="your Email" required>
+                        <textarea name="Message" rows="6" placeholder="your Message"></textarea>
+                        <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+<!-------------------script--------------------------->
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) 
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+        var sideme = document.getElementById("sidemenu");
+        function openmenu()
+        {
+            sideme.style.right = "0";
+        }
+        function closemenu()
+        {
+            sideme.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
+
